@@ -1,10 +1,20 @@
 fileFormatVersion: 2
 guid: 851143d96f6544ad1a7a0468120fe552
-timeCreated: 1458517536
+timeCreated: 1459415416
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - tileUpper: {instanceID: 0}
+  - tileLower: {instanceID: 0}
+  - tileLeft: {instanceID: 0}
+  - tileRight: {instanceID: 0}
+  - tileUpperRight: {instanceID: 0}
+  - tileUpperLeft: {instanceID: 0}
+  - tileLowerRight: {instanceID: 0}
+  - tileLowerLeft: {instanceID: 0}
+  - ObjectManagerGameObject: {fileID: 196998, guid: 9b5058c537dd5432687d755dddad98a8,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
