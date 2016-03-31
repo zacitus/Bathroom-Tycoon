@@ -1,0 +1,22 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ObjectManager.cs">
+    <Files>
+      <File FileName="Assets/Scripts/SpawnObject.cs" Line="10" Column="2" />
+      <File FileName="Assets/Scripts/ColorHighlight.cs" Line="38" Column="14" />
+      <File FileName="Assets/ObjectManager.cs" Line="17" Column="2" />
+      <File FileName="Assets/Scripts/TileProperties.cs" Line="8" Column="16" />
+      <File FileName="Assets/Scripts/MoveCamera.cs" Line="12" Column="3" />
+      <File FileName="Assets/Scripts/PersonAI.cs" Line="13" Column="15" />
+    </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

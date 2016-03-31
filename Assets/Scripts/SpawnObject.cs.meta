@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6824fe1ed888445cc970c7367e79294c
+timeCreated: 1459400057
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - savedObject: {fileID: 164666, guid: accffc427e061499bb8d108ea54586ee, type: 2}
+  - ColorHighlightScript: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

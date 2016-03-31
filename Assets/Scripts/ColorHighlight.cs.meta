@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3602ca0502a0d49a3a6b2002ac765141
+timeCreated: 1459067486
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - spawnObjectScript: {instanceID: 0}
+  - particle: {fileID: 108404, guid: c15f8950f8e194093bc180067d400c66, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
