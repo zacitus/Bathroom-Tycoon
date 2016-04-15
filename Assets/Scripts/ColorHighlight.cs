@@ -16,6 +16,8 @@ public class ColorHighlight : MonoBehaviour {
 	private Color colorA;
 	private Color colorB;
 
+	public bool placingObject = false;
+
 	public GameObject particle;
 
 	//private Renderer clickedTile;
@@ -59,7 +61,7 @@ public class ColorHighlight : MonoBehaviour {
 
 	void OnMouseDown ()
 	{
-		if ((inside) && (GetComponent<TileProperties> ().open == true))
+		if ((inside) && (GetComponent<TileProperties> ().open == true) && (placingObject != true))
 		{
 			// If the tile is free, highlight it as green when clicked
 			//GetComponent<Renderer> ().material.color = Color.green;
@@ -69,6 +71,8 @@ public class ColorHighlight : MonoBehaviour {
 			// Pass the GameObject to the SpawnObjectScript and spawn the prefab on top of the selected GameObject
 			startcolor = GetComponent<Renderer> ().material.color;
 			spawnObjectScript.PlaceObject (gameObject);
+			placingObject = true;
+
 			GetComponent<TileProperties> ().open = false;
 
 			//StartCoroutine(Wait(clickedTile, Color.green, startcolor));
@@ -77,7 +81,7 @@ public class ColorHighlight : MonoBehaviour {
 			colorA = Color.green;
 			isRising = true;
 
-		} else if ((inside) && (GetComponent<TileProperties> ().open == false))
+		} else if ((inside) && (GetComponent<TileProperties> ().open == false) && (placingObject != true))
 		{
 
 			//Renderer clickedTile = GetComponent<Renderer>();

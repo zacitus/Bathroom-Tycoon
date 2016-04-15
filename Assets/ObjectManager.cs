@@ -15,8 +15,6 @@ public class ObjectManager : MonoBehaviour {
 
 	public GameObject[,] tileArray = new GameObject[width, height];
 
-
-
 	void Awake ()
 	{
 
@@ -26,15 +24,15 @@ public class ObjectManager : MonoBehaviour {
 		{
 			for (int x = 0; x < width; x++)
 			{
-				tileArray [x, y] = (Instantiate (tilePrefab, new Vector3 (x, 0, y), Quaternion.identity)) as GameObject;
-				tileArray [x, y].GetComponent<TileProperties> ().ID = i;
+				//tileArray [x, y] = (Instantiate (tilePrefab, new Vector3 (x, 0, y), Quaternion.identity)) as GameObject;
+				//tileArray [x, y].GetComponent<TileProperties> ().ID = i;
 
-				if (i > 77)
+				if (i > 76)
 				{
-					tileArray [x, y].GetComponent<Renderer> ().material = notForSale;
+					//tileArray [x, y].GetComponent<Renderer> ().material = notForSale;
 				}
 
-				i++;
+				//i++;
 			}
 
 		}
@@ -44,13 +42,13 @@ public class ObjectManager : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-	/*
+
 		// Divide the boy's and girl's restroom by dividing the map in half
-		for (int i = 0; i < width / 2; i++)
+		for (int i = 0; i < width; i++)
 		{
-			tileArray [width/2, i].gameObject.GetComponent<Renderer> ().material = notForSale;
+			//tileArray [width/2, i].gameObject.GetComponent<Renderer> ().material = notForSale;
 		}
-		*/
+
 	}
 	// Update is called once per frame
 	void Update () {

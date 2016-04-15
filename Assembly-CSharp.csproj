@@ -45,11 +45,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\BounceObject.cs" />
+     <Compile Include="Assets\MenuButton.cs" />
      <Compile Include="Assets\ObjectManager.cs" />
+     <Compile Include="Assets\Scripts\Bounce.cs" />
      <Compile Include="Assets\Scripts\ColorHighlight.cs" />
+     <Compile Include="Assets\Scripts\Easing.cs" />
      <Compile Include="Assets\Scripts\MoveCamera.cs" />
+     <Compile Include="Assets\Scripts\NextScene.cs" />
+     <Compile Include="Assets\Scripts\ObjectProperties.cs" />
      <Compile Include="Assets\Scripts\PersonAI.cs" />
      <Compile Include="Assets\Scripts\PinchZoom.cs" />
+     <Compile Include="Assets\Scripts\ShopMenuScript.cs" />
      <Compile Include="Assets\Scripts\SpawnObject.cs" />
      <Compile Include="Assets\Scripts\SpawnPeople.cs" />
      <Compile Include="Assets\Scripts\TileProperties.cs" />

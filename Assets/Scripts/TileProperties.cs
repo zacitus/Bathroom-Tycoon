@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class TileProperties : MonoBehaviour {
-
+	
 	public bool open = true;
 
 	public int ID;
+
+	public List<GameObject> nearbyTilesList;
 
 	public GameObject tileUpper;
 	public GameObject tileLower;
@@ -59,6 +62,15 @@ public class TileProperties : MonoBehaviour {
 		tileUpperLeft = AssignTile(tileUpperLeftInt);
 		tileLowerRight = AssignTile(tileLowerRightInt);
 		tileLowerLeft = AssignTile(tileLowerLeftInt);
+
+		nearbyTilesList.Add(tileUpper);
+		nearbyTilesList.Add(tileLower);
+		nearbyTilesList.Add(tileLeft);
+		nearbyTilesList.Add(tileRight);
+		nearbyTilesList.Add(tileUpperRight);
+		nearbyTilesList.Add(tileUpperLeft);
+		nearbyTilesList.Add(tileLowerRight);
+		nearbyTilesList.Add(tileLowerLeft);
 	}
 
 	GameObject AssignTile (int tileNumber)
