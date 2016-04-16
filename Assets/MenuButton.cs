@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class MenuButton : MonoBehaviour {
 
 	bool menuOpen = false;
-
+	public GameObject[] uiElements;
 	public GameObject[] menuButtons;
 
 	// Use this for initialization
@@ -13,6 +14,9 @@ public class MenuButton : MonoBehaviour {
 		foreach (GameObject menuButton in menuButtons)
 			{
 				menuButton.SetActive(false);
+
+
+
 			}
 	}
 
@@ -26,10 +30,16 @@ public class MenuButton : MonoBehaviour {
 			{
 				menuButton.SetActive (true);
 				x++;
-				Debug.Log("x is " + x + " and the List Length is "+ menuButtons.Length);
+				//Debug.Log("x is " + x + " and the List Length is "+ menuButtons.Length);
 
 				if (x == menuButtons.Length)
 				{
+					Collapsible[] uiElements = FindObjectsOfType(typeof(Collapsible)) as Collapsible[];
+					foreach (Collapsible uiElement in uiElements)
+					{
+						uiElement.GetComponent<Bounce>().timeToLeave = false;
+					}
+
 					menuOpen = true;
 				}
 			}
@@ -39,7 +49,11 @@ public class MenuButton : MonoBehaviour {
 		{
 			foreach (GameObject menuButton in menuButtons)
 			{
-				menuButton.SetActive(false);
+				Collapsible[] uiElements = FindObjectsOfType(typeof(Collapsible)) as Collapsible[];
+				foreach (Collapsible uiElement in uiElements)
+				{
+					uiElement.GetComponent<Bounce>().timeToLeave = true;
+				}
 			}
 			menuOpen = false;
 		}

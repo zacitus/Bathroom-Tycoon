@@ -38,6 +38,8 @@ public class Bounce : MonoBehaviour
 
     public Options Side;
 
+    public bool timeToLeave = false;
+
     // Used to increase the springiness/urgency of the animation
     public float padding = 0;
 
@@ -162,7 +164,7 @@ public class Bounce : MonoBehaviour
         StartCoroutine("AnimateIn");
 
         // Find the back button
-        GameObject[] backbuttontest = GameObject.FindGameObjectsWithTag("Back");
+        /*GameObject[] backbuttontest = GameObject.FindGameObjectsWithTag("Back");
 
         List<GameObject> backbutton = new List<GameObject>();
 
@@ -182,13 +184,21 @@ public class Bounce : MonoBehaviour
                 StartCoroutine("AnimateOut");
             }
         }
+        */
+
+        if (timeToLeave)
+        {
+			StopCoroutine("AnimateIn");
+            StartCoroutine("AnimateOut");
+        }
+
+        else if (!timeToLeave) {
+			StopCoroutine("AnimateOut");
+            StartCoroutine("AnimateIn");
+        }
+
     }
 
-    public void RollOut ()
-	{
-		StopCoroutine("AnimateIn");
-        StartCoroutine("AnimateOut");
-	}
 
     // Animates the button from outside the canvas into the canvas
     IEnumerator AnimateIn()

@@ -35,10 +35,10 @@ public class PersonAI : MonoBehaviour {
 		NavMeshAgent agent = GetComponent<NavMeshAgent>();
 
 		int x = endPoints.Length;
-		Debug.Log ("X is " + x);
+//		Debug.Log ("X is " + x);
 
 		int y = Random.Range (0, x);
-		Debug.Log ("Y is " + y);
+//		Debug.Log ("Y is " + y);
 
 		agent.destination = endPoints [y].GetComponent<Transform>().position;
 	}
